@@ -16,6 +16,7 @@ By placing it in your local PATH (bin folder) it can also be run on the command 
 You could duplicate, rename & modify this script for holiday schedules. Call it mch
 
 The script is well commented and simple enough for anyone to follow. You don't need a .sh extension to execute it.
+
 Don't forget to chmod +x it! 
 
 Enjoy!
