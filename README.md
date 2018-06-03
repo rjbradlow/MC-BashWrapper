@@ -1,7 +1,7 @@
 # MC-BashWrapper
 A simple * nix shell script meant to be a used as a Parental control of when Minecraft is allowed to run on a Linux PC.
 It acts as an intermediary between the user and the Minecraft launcher to only allow starting the game after a certain time on certain days and to kill the game at a certain time. 
-It is Most useful for Homeschoolers who have MC on the same machine they learn on to make sure children are not sneaking in gametime when left unattended.
+It is Most useful for Homeschoolers who have MC on the same machine they learn on to make sure children are not sneaking in gametime when left unattended, as it will show / inform the user that the game is not currently allowed to be run and when it will be allowed. 
 
 This script does not account for Holidays.
 While this script can be easily bypassed on the command line as most older kids already know,
@@ -14,7 +14,9 @@ Now there are 2 separate java instances running with their own Process ID's (PID
 Both instances must be killed in order for the game to sanely stop.
 You will never see a 'Minecraft' process on a Linux machine since the only version of Minecraft that runs on Linux are the Java versions and thus run as 'java' in the process list.
 
-NOTE: This script kills ALL running java apps at the end of a scheduled window of playtime since this script currently has no way to isolate which which java processes belong directly to Minecraft as mentioned above.
+kill $(pgrep java)
+
+NOTE: According to your schedule this script kills ALL running java process' at the end of a scheduled window of playtime since this script currently has no way to isolate which which java processes belong directly to Minecraft as mentioned above.
 
 The script is well commented and should be simple enough for anyone to follow. 
 You don't need a .sh extension to execute it provided that you don't forget to place it in your ~./bin folder and chmod +x it! 
