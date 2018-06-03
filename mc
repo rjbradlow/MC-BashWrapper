@@ -37,10 +37,9 @@ mchammer ()
   sleep 10s
  jpid=$(pgrep java)
  if [ -z "$jpid" ]
-  then 
+  then
   exit
- fi  
-  
+ fi
 done
 kill $(pgrep java)
 }
