@@ -3,6 +3,10 @@ A simple * nix shell script meant to be a used as a Parental control of when Min
 It acts as an intermediary between the user and the Minecraft launcher to only allow starting the game after a certain time on certain days and to kill the game at a certain time. 
 It is Most useful for Homeschoolers who have MC on the same machine they learn on to make sure children are not sneaking in gametime when left unattended, as it will show / inform the user that the game is not currently allowed to be run and when it will be allowed. 
 
+When allowed, it sets an expiration time of when the game will be forcibly killed, starts the official minecraft launcher and a time watchdog function. 
+
+TODO: Check when game is killed by user to stop watchdog and kill script.
+
 This script does not account for Holidays.
 While this script can be easily bypassed on the command line as most older kids already know,
 I wrote this for the ones who don't (my kid) and I link it to a menu launcher with a MC icon that runs it in the terminal.
