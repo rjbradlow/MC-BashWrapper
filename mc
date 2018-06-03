@@ -2,19 +2,12 @@
 
 # dow = Day Of Week (w=0-6 / Sun=0 - Sat=6) and hod = Hour of day (H=0-24 Hour)
 # Ref the date manual page for an explanation of the variables used here. (man date)
-# KILL Minecraft on schedule!! : kill $(pgrep java) ... pulls all java pids (numbers only).
-# NOTE: This script kills ALL java apps at the end of your schedule. (heresJohhny)
-# When the minecraft java -jar file is executed it starts up one instance of java for the launcher.
-# When the user hits the play button, the launcher invokes another java instance for the game. 
-# Now there are 2 java pids. (Process IDs) You will never see a "Minecraft" process as it is a JavaVM.
+# KILL Minecraft on schedule: kill $(pgrep java) ... pulls and kills all java PIDs.
+# NOTE: This script kills ALL java apps at the end of your schedule (heresJohhny).
+# 
 # If your kids play on their own PC, You can change the usrname to your child's name, otherwise if
 # you have more than one child fighting over game time on the same PC, you'll just have to be creative
 # here or leave it as is.
-# This script does not count for Holidays but can be bypassed by just entering 
-# java -jar ~/.minecraft/launcher.jar on the command line. No doubt most kids already know this
-# but I wrote this for the ones who don't and I link it to a menu launcher with a MC icon.
-# You could even have another script and menu launcher for holiday schedules.
-# I also have a schedule set in my firewall to block internet access at bedtime too.
 
 usrname="Minecraftian"
 dow=$(date +%w)
@@ -71,7 +64,7 @@ exit
 else
 
 clear
-
+# Here's the message displayed in the terminal only when Minecraft is NOT alllowed to be run.
 echo
 echo
 echo -e "\033[1m Hello ${usrname}!\e[0m"
