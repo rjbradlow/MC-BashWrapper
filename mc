@@ -26,7 +26,7 @@ cyear=$(date +%Y)
 # because I didn't want it running crazy and I didn't want to wait any longer to kill MC.
 # You can change the value of sleep, but it's just gonna take Johnny that much longer to kill Herobrine
 # After the time runs out. i.e.; There will be a Delay before the game actually ends. He's not punctual
-# and the higher you set the sleep value the later he will sleep in.
+# and the higher you set the sleep value the later he will sleep in... So I do not reccomend changing this.
 
 mchammer ()
 {
@@ -35,6 +35,12 @@ mchammer ()
   do
   clh=$(date +%H)
   sleep 10s
+ jpid=$(pgrep java)
+ if [ -z "$jpid" ]
+  then 
+  exit
+ fi  
+  
 done
 kill $(pgrep java)
 }
