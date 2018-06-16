@@ -8,19 +8,18 @@ When allowed, it sets an expiration time of when the game will be forcibly kille
 This script does not account for Holidays.
 While this script can be easily bypassed on the command line as most older kids already know,
 I wrote this for the ones who don't (my kid) and I link it to a menu launcher with a MC icon that runs it in the terminal.
-The script must be placed it in your local PATH (bin folder) so it can be run on the command line either by typing mc and pressing enter or using a menu launcher to call it.
+The script must be placed it in your local PATH (bin folder) so it can be run on the command line either by typing mc and pressing enter or using a menu launcher to call it. - Note that if you have Midnight Commander installed that it too uses 'mc' to start from the command line, so you may wish to rename this script to avoid the conflict.
 
+How Minecraft Java Versions work:
 When the minecraft launcher.jar file is executed it starts up one instance of java for itself.
 When the user clicks the play button, the launcher invokes another java instance for the game. 
 Now there are 2 separate java instances running with their own Process ID's (PID). 
 Both instances must be killed in order for the game to sanely stop.
 You will never see a 'Minecraft' process on a Linux machine since the only version of Minecraft that runs on Linux are the Java versions and thus run as 'java' in the process list.
 
-kill $(pgrep java)
-
-NOTE: According to your schedule this script kills ALL running java process' at the end of a scheduled window of playtime since this script currently has no way to isolate which which java processes belong directly to Minecraft as mentioned above.
+kill $(pgrep java) --- is used in this script to Kill all running java process' at the end of a scheduled window of playtime since this script currently has no way to isolate which which java process' belong directly to Minecraft as mentioned above.
 
 The script is well commented and should be simple enough for anyone to follow. 
-You don't need a .sh extension to execute it provided that you don't forget to place it in your ~./bin folder and chmod +x it! 
+You don't need a .sh extension to execute it provided that you don't forget to place it in your ~./bin folder and make it executable ... chmod +x mc (or whatever you name it.)
 
 Enjoy!
