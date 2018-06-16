@@ -22,4 +22,4 @@ kill $(pgrep java) --- is used in this script to Kill all running java process' 
 The script is well commented and should be simple enough for anyone to follow. 
 You don't need a .sh extension to execute it provided that you don't forget to place it in your ~./bin folder and make it executable ... chmod +x mc (or whatever you name it.)
 
-Enjoy!
+I imagine there is probably a better way of doing all this, so please share if you know.
