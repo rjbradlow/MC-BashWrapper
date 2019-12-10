@@ -17,9 +17,12 @@ Now there are 2 separate java instances running with their own Process ID's (PID
 Both instances must be killed in order for the game to sanely stop.
 You will never see a 'Minecraft' process on a Linux machine since the only version of Minecraft that runs on Linux are the Java versions and thus run as 'java' in the process list.
 
-kill $(pgrep java) --- is used in this script to Kill all running java process' at the end of a scheduled window of playtime since this script currently has no way to isolate which which java process' belong directly to Minecraft as mentioned above.
+kill $(pgrep java) --- is used in this script to Kill all running java process' at the end of a scheduled window of playtime since this script currently has no way to isolate which java process' belong directly to Minecraft as mentioned above.
 
 The script is well commented and should be simple enough for anyone to follow. 
 You don't need a .sh extension to execute it provided that you don't forget to place it in your ~./bin folder and make it executable ... chmod +x mc (or whatever you name it.)
+
+NOTE: There is a new Minecraft launcher out. The old java launcher no longer works with newer versions of Minecraft.
+An upgrade to the new launcher is recommended. 
 
 I imagine there is probably a better way of doing all this, so please share if you know.
