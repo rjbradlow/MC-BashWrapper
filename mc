@@ -41,7 +41,7 @@ mchammer ()
   exit
  fi
 done
-kill $(pgrep java)
+kill $(ps -e -o pid,command | awk '$2 ~ "awk" {next}; $0 ~ "minecraft" {print $1}')
 }
 
 # dow: 0=Sun 1=Mon 2=Tue 3=Wed 4=Thu (-le=less than or equal to) &&=And
